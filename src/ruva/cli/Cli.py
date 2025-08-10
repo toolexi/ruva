@@ -7,7 +7,6 @@ from .groups.InitiateGroup import initiate
 def ruva():
     pass
 
-
 ruva.add_command(create)
 ruva.add_command(initiate)
 
