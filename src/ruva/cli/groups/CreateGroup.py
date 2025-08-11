@@ -1,5 +1,5 @@
 import click
-from ruva.pydanticModels.workspaceModel import (
+from ruva.pydanticModels._workspace import (
     TrainerStruct,
     FinetuneStruct,
     AgentStruct,
@@ -11,7 +11,7 @@ from ruva.utils.WorkspaceManager import WorkspaceManager
 manager = WorkspaceManager()
 
 
-@click.group(help="bundle of creation subcommands")
+@click.group(help="Project creation commands")
 def create():
     pass
 
