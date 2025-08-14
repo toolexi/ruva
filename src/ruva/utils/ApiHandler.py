@@ -1,22 +1,12 @@
 from fastapi import FastAPI
-from ruva.utils.WorkspaceManager import WorkspaceManager
-from ruva.pydanticModels._workspace import (
-    TrainerStruct,
-    FinetuneStruct,
-    AgentStruct,
-    DatasetStruct,
-    AgenticWorkflowStruct,
-)
-
-manager = WorkspaceManager()
+from ruva.utils.APIUtils import GetMethods, PostMethods
 
 app = FastAPI()
 
-@app.get("/")
-def welcome():
-    return "Welcome to ruva"
+# def manager_init():
+#     from ruva.utils.WorkspaceManager import WorkspaceManager
+#     manager = WorkspaceManager()
+#     return manager
 
-@app.post("/create/trainer")
-def createTrainer():
-    manager.triggerConfigs(TrainerStruct)
-    return "trainer configs created"
+app.include_router(GetMethods.router)
+app.include_router(PostMethods.router)

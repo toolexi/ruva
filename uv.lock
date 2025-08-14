@@ -2045,6 +2045,65 @@ wheels = [
 ]
 
 [[package]]
+name = "neo4j"
+version = "5.28.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/50/69/4862fabc082f2447131aada5c91736155349d77ebf443af7f59553b7b789/neo4j-5.28.2.tar.gz", hash = "sha256:7d38e27e4f987a45cc9052500c6ee27325cb23dae6509037fe31dd7ddaed70c7", size = 231874 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/00/1f74089c06aec1fac9390e2300a6a6b2381e0dac281783d64ccca9d681fd/neo4j-5.28.2-py3-none-any.whl", hash = "sha256:5c53b5c3eee6dee7e920c9724391aa38d7135a651e71b766da00533b92a91a94", size = 313156 },
+]
+
+[[package]]
+name = "neo4j-rust-ext"
+version = "5.28.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "neo4j" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e4/42/64ab03b624a793f6748164f35f975ec781109f3c37a469ca2c4f99a5c785/neo4j_rust_ext-5.28.2.0.tar.gz", hash = "sha256:b73e9ccf3c6f939e03ad1f3aaccbd1306148234440a5d3b2503fb24118ed668a", size = 20446 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3a/6a/a713eba6bbed5f2aa508f7a2d133e43025c1c1f5bc7588b5996c33fa4be3/neo4j_rust_ext-5.28.2.0-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:2ce40a0b48d1d9564e79bc71645183b8cc306a0f5a966ce0e27c17a1a352c214", size = 698363 },
+    { url = "https://files.pythonhosted.org/packages/60/9a/c41afb306b77d074b8cb26c9ba200f060b468031bccf4819a757e6cdfadd/neo4j_rust_ext-5.28.2.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:e60bf3382c592c9260d8caaccfb78d1aa312898c17dd8c8acbfe9d62c43c7a8e", size = 697203 },
+    { url = "https://files.pythonhosted.org/packages/e8/47/e42492827b2bf760a449982c436ea14d24d14c33df71486e6b079577c352/neo4j_rust_ext-5.28.2.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:569aff406e79434dd98f110eb3b8b69f94f9cf00100b9fe2ccd2057d89a2c232", size = 297901 },
+    { url = "https://files.pythonhosted.org/packages/a8/b5/af024ce3d20a0343da00e47c97315759be851dee44df0e7b9fee99ac589f/neo4j_rust_ext-5.28.2.0-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:689808d30361b0bb9243e873e8ffd7f38568dd0b3cef11c360ba2795e72890ca", size = 310540 },
+    { url = "https://files.pythonhosted.org/packages/bd/e5/9897b1b917ec43e876cce6d57ff340758d54f5bfdc85407768eeccd1ce4c/neo4j_rust_ext-5.28.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70522c12357f3e1bf3ae222010c71ebe2c66f30a9bd5023e6b7a49ea2a68e461", size = 299498 },
+    { url = "https://files.pythonhosted.org/packages/30/c9/db7d00d096988e894aa26409e87ebde6b443ab0aa57d765a71669e20a864/neo4j_rust_ext-5.28.2.0-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:b53322a7f3c180a74193a94ada6310f2d082ee857529c0666d1e33306a454821", size = 469183 },
+    { url = "https://files.pythonhosted.org/packages/d9/cc/d26f8d626db86043ace77b496978cb2e5892999636438ce61172d754c4eb/neo4j_rust_ext-5.28.2.0-cp310-cp310-win32.whl", hash = "sha256:593626ca539cefe51a9018d7a12cc9edee4289131575c926a3a4910393eed2ee", size = 703966 },
+    { url = "https://files.pythonhosted.org/packages/a9/66/6b5cd5dd7cfd1fb5480226b013b3c5bd07e5ac7fc354eca0ea964031873c/neo4j_rust_ext-5.28.2.0-cp310-cp310-win_amd64.whl", hash = "sha256:c40ea7cccbd3ea20107603b961ec5b97a39091cbc357cd96e9c3d5a416118f44", size = 658542 },
+    { url = "https://files.pythonhosted.org/packages/85/03/a99e6a0fbd4ccf75bc6a7d20fc6184a26b6dda0abde59256c5b8ec40b47c/neo4j_rust_ext-5.28.2.0-cp310-cp310-win_arm64.whl", hash = "sha256:aed752465c2a0cbf5a0eba973c9eb30cddde26b215bb240387a3de72abf764c3", size = 155390 },
+    { url = "https://files.pythonhosted.org/packages/82/02/c37acc6498743df4b5502f33b38a7dc7e737730818159633183fad3fe4e6/neo4j_rust_ext-5.28.2.0-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:28b4c3da0cc9abdf9293d7292c24618404c8ea9aafc5c254b2475d7f8430ec9c", size = 698826 },
+    { url = "https://files.pythonhosted.org/packages/63/3a/ea4e1ab4d94f8716b783dec60e9ca22cbfab642c32b07b4196a8ecd626a7/neo4j_rust_ext-5.28.2.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:34089a060afd261cee17172d71b73865f22163cd581cb6b9c1df315ef1cf6747", size = 697701 },
+    { url = "https://files.pythonhosted.org/packages/06/12/920401ac45fa3706810787891071508537d78cb0db91ef38f132fe33d765/neo4j_rust_ext-5.28.2.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:39b316da62392d53556b1f40d75eda12f03f421e03d8957bff1583321670efd5", size = 297872 },
+    { url = "https://files.pythonhosted.org/packages/5e/9a/9fdd3a9cee5d1d5ac741526484442eb3b86a7a115cfd97383b68203a7e7d/neo4j_rust_ext-5.28.2.0-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:58ce2939dddc8e1186ab783d5b7c9c18cc61a39545669bcc0145372f21a781aa", size = 310368 },
+    { url = "https://files.pythonhosted.org/packages/5b/9c/e48bd1e87a12cf92f8f2a3d9089a4c503c8f27429eb768f56bae07e79130/neo4j_rust_ext-5.28.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:48ca8a623dd74f26f60021910b8a15b9e1ba7293e22e4257682be71c6cea0290", size = 299545 },
+    { url = "https://files.pythonhosted.org/packages/5d/9c/9afe37a4d152a7fbaa976b1b24dff02ba01cd0658b7a689a8b7f4655f315/neo4j_rust_ext-5.28.2.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:bc259e9db39bc716fccf670b4300a268de4b764bff31053f47b420fada0e1feb", size = 469287 },
+    { url = "https://files.pythonhosted.org/packages/08/32/0b6e7c68802d338807f32ef99d7c4aaadaac2d6f85cb1436dd1d52317ca8/neo4j_rust_ext-5.28.2.0-cp311-cp311-win32.whl", hash = "sha256:6cdcbe6785de87d71d8c1eaee9b371c974c1c94624f23f9624f35fee1d3f9f95", size = 704539 },
+    { url = "https://files.pythonhosted.org/packages/e2/dd/23b6c72a141c0c7d40c82fe0e5da097527544eaa01758921666323982d2b/neo4j_rust_ext-5.28.2.0-cp311-cp311-win_amd64.whl", hash = "sha256:d300a5f8a52240fd839cc3c58d95ec27be0f9f7a88e717e86b1cf65737a4f80d", size = 659172 },
+    { url = "https://files.pythonhosted.org/packages/90/bc/361ca0f9c8898ce71cc442fe1c0bd028cb525db73d22d7dd4aafd6dcce4f/neo4j_rust_ext-5.28.2.0-cp311-cp311-win_arm64.whl", hash = "sha256:6c93b4e2fa54863a5843258fae91b7b71792896d4b30ca2111fa0f49b0381f01", size = 155727 },
+    { url = "https://files.pythonhosted.org/packages/60/4c/056b7f4de62436005a079fc7750b5a2cbff55e6f96e3e2b1078aa272438a/neo4j_rust_ext-5.28.2.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:8d86e25732184cdb69faa0f894cfce066a55cbac3de5834a50730459849c4b3a", size = 695449 },
+    { url = "https://files.pythonhosted.org/packages/35/9e/d9124bc891dfbffe4c666fd228c194e399a4bbcc62d7e7f4b7860d7cb030/neo4j_rust_ext-5.28.2.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:335c7a04f8444e70f9d6e3c4478b01a1c93ca4c73d77fe71b8573e6c129569b0", size = 693800 },
+    { url = "https://files.pythonhosted.org/packages/1a/da/133608064d683b84c3b166000e2548931d0bfd9328d80debb503eaa3090d/neo4j_rust_ext-5.28.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:895c3730e5794c8775b8f7518a867b0768b126c8be330af5f228aa7d574284b4", size = 297409 },
+    { url = "https://files.pythonhosted.org/packages/76/93/44cc22e24b1e4657a41a79386a4809ba40d0f2b6ef91278a8f6a27c744d6/neo4j_rust_ext-5.28.2.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:c63c759b78c0e0c0474ab6ae61b6099e53b9cbb830744e1c657af4f4ab6a6692", size = 309740 },
+    { url = "https://files.pythonhosted.org/packages/c2/32/3b6a44599c49c20bc1cb64f4f9e3b05e4c3f460f72732043c339ae5ee2af/neo4j_rust_ext-5.28.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:de3682e832f32a4725ca69a4ba6925b5a031b8138a73eea282164b83cd8ad967", size = 299110 },
+    { url = "https://files.pythonhosted.org/packages/47/a0/581eb1dcdc028e03ad3a9cce484d675c71b9dbf69aeba6f11940e7885f43/neo4j_rust_ext-5.28.2.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:dc600847b7c91cb0df7eb8605d7d1875fd392b6bc9d962782281988e4c4e87d1", size = 468812 },
+    { url = "https://files.pythonhosted.org/packages/f7/a1/02f7e914030a54d1f67dba1fee00fd85767519373e4305412f555a88bb14/neo4j_rust_ext-5.28.2.0-cp312-cp312-win32.whl", hash = "sha256:f99485f10cdb761b9888bd34dd4edbe82c09798aa2f6e39815c93b164faadcae", size = 703215 },
+    { url = "https://files.pythonhosted.org/packages/30/e4/273e24fe1a53b52190c5df5ec310881cb4d09b4705bb0b6f75eea22bdbee/neo4j_rust_ext-5.28.2.0-cp312-cp312-win_amd64.whl", hash = "sha256:fde5b83f35b77a647ecc0cd572064436c24ce4abac66b1abdb7d6d810619ac9c", size = 655644 },
+    { url = "https://files.pythonhosted.org/packages/73/9b/03ca2c4c99bb5619b3757760866a81682e53cc22419def1862c20fca9403/neo4j_rust_ext-5.28.2.0-cp312-cp312-win_arm64.whl", hash = "sha256:0a9b1c188dd8a28a22689b424cbf3f6483de8cebbb68c8190e12b676e0ed3954", size = 154494 },
+    { url = "https://files.pythonhosted.org/packages/85/8e/a913e7e2c6b504633faab06d185febca54de1a4940342654bfc7cf3b47e0/neo4j_rust_ext-5.28.2.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:5062a7f81b9e97b1cdca634dce9c207396fa225efedcbe3dd15a357161489a50", size = 694448 },
+    { url = "https://files.pythonhosted.org/packages/03/6f/383a3491d9fa189c236e15dab945cea2721fabff241d60234789a64aec38/neo4j_rust_ext-5.28.2.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:ffa4f05f1907d966f0694f7158e8f817d89c7dfda8ff1d7fd2a0f3541224897f", size = 692781 },
+    { url = "https://files.pythonhosted.org/packages/ce/13/bb9dfcc36676509688964a8618802551f906d7a053db7747c89641eaec77/neo4j_rust_ext-5.28.2.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:86fe37d7fac128d36a829122e29a91a5e0440e46d5849e61fca6eb15b206266b", size = 297204 },
+    { url = "https://files.pythonhosted.org/packages/e1/9e/c9cb818f0740998e144edd9b97e4b26bb26f2406872e0a4d3a5bd4eb0bb6/neo4j_rust_ext-5.28.2.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:40c79069a58e9708df7d6a3cb4865857fefa6986aeda47db6f9ae5298837bb75", size = 309789 },
+    { url = "https://files.pythonhosted.org/packages/66/8d/8e4197f1cea2ced3e9ee6fe3f7894f7ac3e77b420ddfa86cc69060f2154a/neo4j_rust_ext-5.28.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:299408c032a157f4fba6db92fcc939271693531ef848e80e4f20172096c6ce59", size = 298763 },
+    { url = "https://files.pythonhosted.org/packages/b0/de/7b6f6b79c8460e38883a291c79b9239e7b94b37a139c519209c435b89d1d/neo4j_rust_ext-5.28.2.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:57f00a30f2d43c1a4d2f0861e66498ada030f67b043e41a2fdf369f0f8a73afa", size = 468501 },
+    { url = "https://files.pythonhosted.org/packages/13/c6/7c0c4bea99a43b06c948f619aefdc18cb1133ec111d938dea4274e5a1b75/neo4j_rust_ext-5.28.2.0-cp313-cp313-win32.whl", hash = "sha256:264bcc67e16aadda9b1dfca16618bb012a3882a2797bf2cd7be06ed6e1afa511", size = 701754 },
+    { url = "https://files.pythonhosted.org/packages/04/96/e0310810d3d6c09463752d25dbbfa115d6dce8cfaf131210b49aca7386a2/neo4j_rust_ext-5.28.2.0-cp313-cp313-win_amd64.whl", hash = "sha256:efd84ead7e133c61abd20cb2c9b28bdd783cdb3a738641a33f706eb41dc8d634", size = 654057 },
+    { url = "https://files.pythonhosted.org/packages/83/59/a8025d1e98e98fc81c7c8307c32e04d95952c54bc4707833db0e677bf878/neo4j_rust_ext-5.28.2.0-cp313-cp313-win_arm64.whl", hash = "sha256:89ea9cb82013ae07b3e6dbc1e3f7b924928a06d2585afa4b60c137aa1960babf", size = 154356 },
+]
+
+[[package]]
 name = "networkx"
 version = "3.4.2"
 source = { registry = "https://pypi.org/simple" }
@@ -3572,6 +3631,7 @@ dependencies = [
     { name = "langchain" },
     { name = "mcp", extra = ["cli"] },
     { name = "mlflow" },
+    { name = "neo4j-rust-ext" },
     { name = "ollama" },
     { name = "peft" },
     { name = "qdrant-client" },
@@ -3594,6 +3654,7 @@ requires-dist = [
     { name = "langchain", specifier = ">=0.3.27" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.12.4" },
     { name = "mlflow", specifier = ">=3.2.0" },
+    { name = "neo4j-rust-ext", specifier = ">=5.28.2.0" },
     { name = "ollama", specifier = ">=0.5.3" },
     { name = "peft", specifier = ">=0.17.0" },
     { name = "qdrant-client", specifier = ">=1.12.1" },
