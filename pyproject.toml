@@ -18,6 +18,7 @@ dependencies = [
     "peft>=0.17.0",
     "qdrant-client>=1.12.1",
     "streamlit>=1.48.1",
+    "tomli>=2.2.1",
     "trl>=0.21.0",
     "uvicorn>=0.35.0",
     "verl>=0.5.0",

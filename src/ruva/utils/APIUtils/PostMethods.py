@@ -18,26 +18,26 @@ manager = WorkspaceManager()
 router = APIRouter(tags=["Create Methods"])
 
 
-@router.post("/create/model")
+@router.post("/init/model")
 def modelTrainer(struct: TrainerStruct):
-    manager.triggerConfigs(struct)
+    manager.trigger_configs(struct)
 
 
-@router.post("/create/finetune")
+@router.post("/init/finetune")
 def modelFinetuner(struct: FinetuneStruct):
-    manager.triggerConfigs(struct)
+    manager.trigger_configs(struct)
 
 
-@router.post("/create/agent")
+@router.post("/init/agent")
 def createAgent(struct: AgentStruct):
-    manager.triggerConfigs(struct)
+    manager.trigger_configs(struct)
 
 
-@router.post("/create/dataset")
+@router.post("/init/dataset")
 def createDataset(struct: DatasetStruct):
-    manager.triggerConfigs(struct)
+    manager.trigger_configs(struct)
 
 
-@router.post("/create/workflow")
+@router.post("/init/workflow")
 def createAgenticWorkflow(struct: AgenticWorkflowStruct):
-    manager.triggerConfigs(struct)
+    manager.trigger_configs(struct)

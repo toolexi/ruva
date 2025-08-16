@@ -4,6 +4,7 @@ from ruva.utils.APIUtils import GetMethods, PostMethods
 
 app = FastAPI()
 
+
 def find_free_port(preferred_port, max_attempts=5):
     port = preferred_port
     for _ in range(max_attempts):
@@ -15,6 +16,7 @@ def find_free_port(preferred_port, max_attempts=5):
             except OSError:
                 port += 1
     raise RuntimeError("No free ports found in range")
+
 
 app.include_router(GetMethods.router)
 app.include_router(PostMethods.router)
