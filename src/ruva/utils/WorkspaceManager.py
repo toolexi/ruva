@@ -1,8 +1,8 @@
 import os
 from typing import Dict
 from pydantic import BaseModel
-import json
-from ruva.pydanticModels._workspace import ProjectConfigsStruct
+from ruva.pydanticModels._workspace import ProjectConfigsStruct, ProjManager
+import tomlkit
 
 
 class WorkspaceManager:
@@ -11,19 +11,28 @@ class WorkspaceManager:
 
     def initiate_project(self, configs: Dict):
         mainconfig_path = os.getcwd()
-        configs_json = json.loads(configs)
-        _dirname = configs_json["name"]
+        # configs_json = json.loads(configs)
+        _dirname = configs["name"]
         configpath = mainconfig_path + "/" + _dirname
-        assetConfig = configs_json["configType"].lower()
+        assetConfig = configs["configType"].lower()
 
         if not os.path.exists(configpath):
             os.mkdir(configpath)
-        with open(configpath + "/" + assetConfig + "config.json", "w") as config_file:
-            config_file.write(configs)
-        if not os.path.exists(mainconfig_path + "/ruvaconfig.json"):
-            with open(mainconfig_path + "/ruvaconfig.json", "a") as main_config:
-                main_config.write(ProjectConfigsStruct().model_dump_json(indent=4))
+        with open(configpath + "/" + assetConfig + "config.toml", "w") as config_file:
+            config_file.write(tomlkit.dumps(configs, sort_keys=False))
+        if not os.path.exists(mainconfig_path + "/ruvaconfig.toml"):
+            with open(mainconfig_path + "/ruvaconfig.toml", "w") as main_config:
+                main_config.write(
+                    tomlkit.dumps(
+                        ProjManager(project=ProjectConfigsStruct()).model_dump()
+                    )
+                )
+        if not os.path.exists(mainconfig_path + "/.env"):
+            with open(mainconfig_path + "/.env", "w") as main_config:
+                main_config.write(
+                    "#Add your configs here"
+                )
 
     def trigger_configs(self, baseClass: BaseModel):
-        configs = baseClass.model_dump_json(indent=4)
+        configs = baseClass.model_dump()
         self.initiate_project(configs)

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 class MCPToolDefs(BaseModel):
-    name: str = "toolName"
+    name: str
     description: str = "tool description"
     version: str = "0.0.1"
     contentType: str = "code | text"
@@ -11,7 +11,7 @@ class MCPToolDefs(BaseModel):
 
 
 class MCPResourceDefs(BaseModel):
-    name: str = "resourceName"
+    name: str
     description: str = "resource description"
     version: str = "0.0.1"
     contentType: str = "code | text"
@@ -20,7 +20,7 @@ class MCPResourceDefs(BaseModel):
 
 
 class MCPPromptDefs(BaseModel):
-    name: str = "promptName"
+    name: str
     description: str = "prompt description"
     version: str = "0.0.1"
     contentType: str = "text"
