@@ -43,3 +43,11 @@ class AgenticWorkflowStruct(BaseModel):
     description: str = "Agentic Workflow Config"
     version: str = "0.1.0"
     configType: str = "Workflow"
+
+
+class AssetManager(BaseModel):
+    model: BaseModel
+
+
+class ProjManager(BaseModel):
+    project: ProjectConfigsStruct
