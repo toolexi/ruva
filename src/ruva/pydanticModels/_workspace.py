@@ -8,45 +8,47 @@ class ProjectConfigsStruct(BaseModel):
     description: str = "AI asset master configs"
     version: str = "0.0.1"
     graphRag: str = "false"
+    ollama: bool = True
+    huggingface: bool = False
 
 
 class TrainerStruct(BaseModel):
     name: str
     description: Optional[str] = "Model/LLM Training Configs"
     version: Optional[str] = "0.1.0"
-    configType: Optional[str] = "Model"
+    configType: Optional[str] = "model"
 
 
 class FinetuneStruct(BaseModel):
     name: str
     description: str = "LLM Finetune Configs"
     version: str = "0.1.0"
-    configType: str = "Finetuner"
+    configType: str = "finetuner"
 
 
 class AgentStruct(BaseModel):
     name: str
     description: str = "Agentic Config"
     version: str = "0.1.0"
-    configType: str = "Agent"
+    configType: str = "agent"
 
 
 class DatasetStruct(BaseModel):
     name: str
     description: str = "Dataset synthesis Config"
     version: str = "0.1.0"
-    configType: str = "Dataset"
+    configType: str = "dataset"
 
 
 class AgenticWorkflowStruct(BaseModel):
     name: str
     description: str = "Agentic Workflow Config"
     version: str = "0.1.0"
-    configType: str = "Workflow"
+    configType: str = "workflow"
 
 
-class AssetManager(BaseModel):
-    model: BaseModel
+class AgentManager(BaseModel):
+    agentName: AgentStruct
 
 
 class ProjManager(BaseModel):

@@ -1,7 +1,5 @@
 import click
 from ruva.pydanticModels._workspace import (
-    TrainerStruct,
-    FinetuneStruct,
     AgentStruct,
     DatasetStruct,
     AgenticWorkflowStruct,
@@ -16,16 +14,16 @@ def init():
     pass
 
 
-@init.command()
-@click.option("--name", required=True, help="Enter Model name to create")
-def modeltrainer(name):
-    manager.trigger_configs(TrainerStruct(name=name))
+# @init.command()
+# @click.option("--name", required=True, help="Enter Model name to create")
+# def modeltrainer(name):
+#     manager.trigger_configs(TrainerStruct(name=name))
 
 
-@init.command()
-@click.option("--name", required=True, help="Enter finetuner name to create")
-def modelfinetuner(name):
-    manager.trigger_configs(FinetuneStruct(name=name))
+# @init.command()
+# @click.option("--name", required=True, help="Enter finetuner name to create")
+# def modelfinetuner(name):
+#     manager.trigger_configs(FinetuneStruct(name=name))
 
 
 @init.command()
@@ -36,11 +34,11 @@ def dataset(name):
 
 @init.command()
 @click.option("--name", required=True, help="Enter agent name to create")
-def mcpagent(name):
+def agent(name):
     manager.trigger_configs(AgentStruct(name=name))
 
 
 @init.command()
 @click.option("--name", required=True, help="Enter workflow name to create")
-def agenticworkflow(name):
+def workflow(name):
     manager.trigger_configs(AgenticWorkflowStruct(name=name))

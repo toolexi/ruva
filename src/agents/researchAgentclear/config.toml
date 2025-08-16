@@ -1,0 +1,4 @@
+name = "researchAgentclear"
+description = "Agentic Config"
+version = "0.1.0"
+configType = "agent"
