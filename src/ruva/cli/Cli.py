@@ -1,5 +1,5 @@
 import click
-from .groups.CreateGroup import create
+from .groups.CreateGroup import init
 from .groups.ApiGroup import server
 
 
@@ -8,7 +8,7 @@ def ruva():
     pass
 
 
-ruva.add_command(create)
+ruva.add_command(init)
 ruva.add_command(server)
 
 

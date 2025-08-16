@@ -1,5 +1,5 @@
 {
-    "name": "sampleDataset",
+    "name": "testTrainer",
     "description": "Dataset synthesis Config",
     "version": "0.1.0",
     "configType": "Dataset"

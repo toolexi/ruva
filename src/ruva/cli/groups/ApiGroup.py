@@ -12,4 +12,4 @@ def server():
 def start():
     port = find_free_port(8000)
     print(port)
-    uvicorn.run("ruva.utils.ApiHandler:app",host="127.0.0.1", port=port, reload=True)
+    uvicorn.run("ruva.utils.ApiHandler:app", host="127.0.0.1", port=port, reload=True)

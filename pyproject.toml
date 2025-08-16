@@ -17,6 +17,8 @@ dependencies = [
     "ollama>=0.5.3",
     "peft>=0.17.0",
     "qdrant-client>=1.12.1",
+    "streamlit>=1.48.1",
+    "tomli>=2.2.1",
     "trl>=0.21.0",
     "uvicorn>=0.35.0",
     "verl>=0.5.0",
@@ -38,23 +40,17 @@ dev = [
 
 [tool.ruff]
 exclude = [
-    ".eggs",
     ".git",
-    ".pyenv",
-    ".pytest_cache",
-    ".pytype",
+    ".venv",
     ".ruff_cache",
     ".venv",
     ".vscode",
     "__pypackages__",
-    "_build",
     "build",
     "dist",
-    "site-packages",
-    "venv",
 ]
 
 
 [tool.black]
-exclude = '\.eggs|\.git|\.pyenv|\.pytest_cache|\.pytype|\.ruff_cache|\.venv|\.vscode|__pypackages__|_build|build|dist|site-packages|venv'
+exclude = '\.git|\.ruff_cache|\.venv|\.vscode|__pypackages__|build|dist|.venv'
 
