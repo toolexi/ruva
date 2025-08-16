@@ -1,22 +1,8 @@
-# # To load from a file:
-# with open("config.toml", "rb") as f:
-#     data = tomli.load(f)
-# print(data)
-
-# To load from a string:
-# toml_string = """
-# [database]
-# type = "postgresql"
-# host = "localhost"
-# port = 5432
-# """
-# data_from_string = tomli.loads(toml_string)
-# print(data_from_string)
 import tomlkit
 from pydantic import BaseModel
 from typing import Dict
 
-from ruva.smarty.handlers.MCPHandlers import MCPToolDefs
+from ruva.pydanticModels._mcp_handlers import MCPToolDefs
 
 
 class ServerHandler:
@@ -30,7 +16,7 @@ class ServerHandler:
 
     def generate_tool(self, name: str, struct: BaseModel):
         configs = struct(name=name).model_dump()
-        print(type(configs))
+        print(configs)
         return configs
 
     def generate_resources(self, name: str, struct: BaseModel):
