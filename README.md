@@ -1,2 +1,2 @@
 # RUVA cli
-## Smart CLI to build, orchestrate and deploy AIOps/DataOps workflows.
+## Low Code UI with Intelligent Terminal. Build and Deploy AI assets at Scale.
