@@ -1,7 +1,7 @@
 [project]
 name = "ruva"
 version = "0.1.0"
-description = "Library for Training, Finetuning and Optimizing LLMs and Orchestrating Agetic Workflows"
+description = "Executable Intelligence Utility"
 readme = "README.md"
 authors = [
     { name = "Jay Reddy", email = "jayachandra.s.reddy@gmail.com" }
