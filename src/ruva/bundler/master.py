@@ -2,17 +2,15 @@ from dataclasses import dataclass, field, replace
 from functools import cached_property
 from typing import Literal
 import docker
+from .handlers import ImageHandler, ContainerHandler
 
 LoadType = Literal["images", "containers"]
 
 
 @dataclass(frozen=True)
-class DockerMaster:
+class DockerMaster(ImageHandler, ContainerHandler):
     _client: docker.DockerClient = field(default=None, repr=False)
     _intent: LoadType | None = field(default=None, repr=False)
-    # _images: tuple[Any, ...] = field(default_factory=tuple, repr=False)
-    # _containers: tuple[Any, ...] = field(default_factory=tuple, repr=False)
-    # _loaded_type: str = field(default_factory=str, repr=False)
 
     def connect(self) -> "DockerMaster":
         return replace(self, _client=docker.from_env())
@@ -24,15 +22,24 @@ class DockerMaster:
         return replace(self, _intent="containers")
     
     @property
-    def _get_images_(self):
+    def _get_images(self):
         images = self._client.images.list()
         return images
     
     @property
-    def _get_containers_(self):
+    def _get_containers(self):
         containers = self._client.containers.list()
         return containers
     
     def get(self):
         response_dict = {"images": self._client.images.list(), "containers": self._client.containers.list()}
         return { self._intent : response_dict[self._intent]}
+
+# print(DockerMaster().connect().images().get())
+# DockerMaster(image_name="hello-world").connect().remove_image()
+
+# DockerMaster().connect().get_container_status()
+
+print(DockerMaster().connect().build_image(variant="notebook", tag="jupyter_nb_image"))
+
+# print(DockerMaster().build_image())
