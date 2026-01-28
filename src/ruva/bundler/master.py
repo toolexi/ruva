@@ -2,8 +2,11 @@ from dataclasses import dataclass, field, replace
 from typing import Literal
 import docker
 from .handlers import ImageHandler, ContainerHandler, DockerResourceHandler
+import secrets
 
 LoadType = Literal["images", "containers"]
+
+token = secrets.token_hex(24)
 
 
 @dataclass(frozen=True)
@@ -45,10 +48,24 @@ class DockerMaster(ImageHandler, ContainerHandler, DockerResourceHandler):
 
 # print(DockerMaster().connect().build_image(variant="notebook", tag="jupyter_nb_image"))
 
+print("http://127.0.0.1:8888/lab?token=" + token)
+
 print(
     DockerMaster()
     .connect()
-    .start_container(image_name="jupyter_nb_image", name="sample_container")
+    .start_container(
+        image_name="jupyter_nb_image",
+        name="sample_container",
+        command=[
+            "jupyter",
+            "lab",
+            "--ip=0.0.0.0",
+            "--port=8888",
+            "--no-browser",
+            "--allow-root",
+            f"--IdentityProvider.token={token}",
+        ],
+    )
 )
 
 # print(DockerMaster().build_image())
